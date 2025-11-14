@@ -1,22 +1,16 @@
 import { useState } from 'react';
-import {weatherDetails} from './Weather.jsx';
+import WeatherDetails from './WeatherDetails.jsx';
 import './WeatherSite.css';
 
 export default function WeatherSite() {
 
     let [city, setCity] = useState("");
-    let [details, setDetails] = useState({});
 
     let handleCity = (event) => {
         event.preventDefault();
         setCity(event.target.city.value);
-        handleDetails();
+        event.target.reset();
     }
-
-    let handleDetails = () => {
-        let cityDetails = weatherDetails.find(v => v.city === city);
-        setDetails(cityDetails || {});
-    };
 
     return (
     <>
@@ -29,11 +23,7 @@ export default function WeatherSite() {
                     </input>
                     <button className="searchButton">Search</button>
                 </form> 
-                <div className="detailsContainer">
-                    <div className="wCity">{details.city}</div>
-                    <div className="wTemperature">{details.temperature}</div>
-                    <div className="wDescription">{details.description}</div>
-                </div>
+                <WeatherDetails city={city}/>
             </div>
         </div>
     </>
