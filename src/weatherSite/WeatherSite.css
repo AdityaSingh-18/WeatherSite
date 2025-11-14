@@ -1,0 +1,33 @@
+.weatherContainer{
+    width: 700px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.weatherTitle{
+    font-size: 80px;
+    text-align: center;
+    margin: 15px auto;
+    padding: 0;
+}
+
+.weatherInput{
+    width: 550px;
+    height: 30px;
+    margin: 0 10px;
+    padding: 0px;
+}
+
+.searchButton{
+    width: 60px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.detailsContainer{
+    width: 700px;
+    margin: 0 auto;
+    margin-top: 40px;
+    text-align: center;
+}
+
