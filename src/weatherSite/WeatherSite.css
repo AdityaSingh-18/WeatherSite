@@ -1,20 +1,25 @@
-.weatherContainer{
+.wContainer{
     width: 700px;
     margin: 0 auto;
     padding: 0;
 }
 
-.weatherTitle{
+.wTitle{
     font-size: 80px;
     text-align: center;
     margin: 15px auto;
     padding: 0;
 }
 
-.weatherInput{
-    width: 550px;
+.wInputContainer{
+    width: 700px;
+}
+
+.wInput{
+    width: 500px;
     height: 30px;
-    margin: 0 10px;
+    margin: 10px;
+    margin-left: 60px;
     padding: 0px;
 }
 
@@ -25,9 +30,14 @@
 }
 
 .detailsContainer{
-    width: 700px;
+    width: 600px;
     margin: 0 auto;
     margin-top: 40px;
     text-align: center;
+}
+
+.wCity{
+    color: black;
+    font-size: 30px;
 }
 
