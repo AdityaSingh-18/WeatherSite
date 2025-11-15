@@ -4,8 +4,8 @@ import './WeatherSite.css';
 
 export default function WeatherSite() {
 
-    let [city, setCity] = useState("");
-
+    let [city, setCity] = useState({});
+    
     let handleCity = (event) => {
         event.preventDefault();
         setCity(event.target.city.value);

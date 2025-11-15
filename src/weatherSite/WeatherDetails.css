@@ -6,6 +6,22 @@
 }
 
 .wCity{
-    color: black;
+    font-size: 30px;
+}
+
+.wTemperatur{
+    font-size: 24px;
+}
+
+.wDescription{
+    font-size: 20px;
+}
+
+.wError{
+    width: 400px;
+    margin : 0 auto;
+    margin-top: 100px;
+    padding: 0;
+    text-align: center;
     font-size: 30px;
 }
