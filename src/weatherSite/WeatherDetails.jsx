@@ -1,14 +1,22 @@
 import { useEffect, useState } from 'react';
-import {weatherDetails} from './Weather.jsx';
 import './WeatherDetails.css';
+import axios from 'axios';
 
 export default function WeatherDetails({city}) {
 
     let [details, setDetails] = useState({});
 
+    let apiKey = '5aa8e5ea2491281ae5c9479389f976a4';
+
     useEffect(() => {
-        let cityDetails = weatherDetails.find(v => v.city === city);
-        setDetails(cityDetails || {});
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+        axios.get(url).then((res) => {
+            setDetails({
+                city: res.data.name,
+                temperature: res.data.main.temp,
+                description: res.data.weather[0].description,
+            });
+        });
     }, [city]);
 
     return (
