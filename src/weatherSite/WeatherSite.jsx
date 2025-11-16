@@ -4,7 +4,7 @@ import './WeatherSite.css';
 
 export default function WeatherSite() {
 
-    let [city, setCity] = useState({});
+    let [city, setCity] = useState('');
     
     let handleCity = (event) => {
         event.preventDefault();
@@ -23,7 +23,7 @@ export default function WeatherSite() {
                     </input>
                     <button className="searchButton">Search</button>
                 </form> 
-                <WeatherDetails city={city}/>
+                {city && <WeatherDetails city={city} setCity={setCity}/>}
             </div>
         </div>
     </>
