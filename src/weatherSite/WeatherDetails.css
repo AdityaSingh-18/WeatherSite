@@ -1,27 +1,53 @@
-.detailsContainer{
-    width: 600px;
-    margin: 0 auto;
+.wError {
+    color: white;
+    font-size: 30px;
     margin-top: 40px;
+}
+
+.detailsContainer {
     text-align: center;
+    width: 500px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 900;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 3px white;
+    margin: 0 auto;
+    position: relative;
 }
 
-.wCity{
-    font-size: 30px;
+.wcloseButton {
+    position: absolute;
+    top: -6px;
+    right: -2px;
+    background: transparent;
+    border: none;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-.wTemperatur{
-    font-size: 24px;
+.wcloseButton:hover {
+    color: red;
 }
 
-.wDescription{
+.wCity, .wTemperature {
+    font-size: 36px;
+}
+
+.wDescription {
+    font-size: 16px;
+}
+
+.wInfo {
+    display: flex;
+    justify-content: space-between;
     font-size: 20px;
+    gap: 20px;
 }
 
-.wError{
-    width: 400px;
-    margin : 0 auto;
-    margin-top: 100px;
-    padding: 0;
-    text-align: center;
-    font-size: 30px;
+.wInfo div {
+    flex: 1;
 }

@@ -2,9 +2,8 @@ import { useEffect, useState } from 'react';
 import './WeatherDetails.css';
 import axios from 'axios';
 
-export default function WeatherDetails({city, setCity}) {
+export default function WeatherDetails({city, setCity, details, setDetails}) {
 
-    let [details, setDetails] = useState(null);
     let [error, setError] = useState(null);
 
     let apiKey = '5aa8e5ea2491281ae5c9479389f976a4';
